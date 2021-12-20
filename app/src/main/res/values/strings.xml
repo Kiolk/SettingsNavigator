@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Settings navigator</string>
+    <string name="open_settings_main">Открыть настройки</string>
+    <string name="close_popup">x</string>
+    <string name="find_application_title_popup">Найдите приложение cCleaner и коснитесь его</string>
+    <string name="application_name_popup">cCleaner</string>
+    <string name="not_allowed_popup">Не разрешено</string>
+    <string name="allowed_popup">Pазрешено</string>
+</resources>

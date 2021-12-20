@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_popup_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray">
+
+    <TextView
+        android:id="@+id/tv_close_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/base_padding"
+        android:text="@string/close_popup"
+        android:textColor="@color/black"
+        android:textSize="@dimen/base_text_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_popup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/base_padding"
+        android:text="@string/find_application_title_popup"
+        android:textSize="@dimen/base_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/tv_close_popup"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_application_mane_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/application_name_popup"
+        android:textSize="@dimen/base_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_application_status_popup"
+        app:layout_constraintLeft_toRightOf="@+id/iv_application_icon_popup"
+        app:layout_constraintTop_toTopOf="@+id/iv_application_icon_popup"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_application_status_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/not_allowed_popup"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_application_icon_popup"
+        app:layout_constraintLeft_toRightOf="@+id/iv_application_icon_popup"
+        app:layout_constraintTop_toBottomOf="@+id/tv_application_mane_popup"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_application_icon_popup"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_close_popup"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_application_icon_popup"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_application_icon_popup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
